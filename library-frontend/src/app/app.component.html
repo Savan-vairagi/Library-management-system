@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<div class="app-container">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">{{title}}</a>
+      <div class="navbar-nav ms-auto" *ngIf="authService.isAuthenticated()">
+        <button class="btn btn-outline-light" (click)="logout()">Logout</button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-fluid mt-4">
+    <router-outlet></router-outlet>
+  </div>
+</div>
